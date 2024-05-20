@@ -1,5 +1,5 @@
 import { PrismaSquadsRepository } from "@/repositories/prisma/prisma-squads-repository"
-import { GetUserSquadsService } from "../squads/get-user-squads"
+import { GetUserSquadsService } from "@/services/squads/get-user-squads"
 
 
 export function makeGetUserSquadsService() {

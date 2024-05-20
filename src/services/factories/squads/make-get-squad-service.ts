@@ -1,7 +1,7 @@
 import { PrismaMeetingsRepository } from "@/repositories/prisma/prisma-meetings-repository"
-import { GetSquadService } from "../squads/get-squad-service"
 import { PrismaWorkTimeRepository } from "@/repositories/prisma/prisma-work-time-repository"
 import { PrismaSquadsRepository } from "@/repositories/prisma/prisma-squads-repository"
+import { GetSquadService } from "@/services/squads/get-squad-service"
 
 
 export function makeGetSquadService() {

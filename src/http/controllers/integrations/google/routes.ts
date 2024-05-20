@@ -1,9 +1,9 @@
 
 
 import { FastifyInstance } from "fastify";
-import { verifyJWT } from "../../middlewares/auth";
 import { googleConect } from "./conect";
 import { googleRedirect } from "./redirect";
+import { verifyJWT } from "@/http/middlewares/auth";
 
 export async function googleRoutes(app: FastifyInstance) {
 

@@ -1,5 +1,5 @@
 import { PrismaSquadsRepository } from "@/repositories/prisma/prisma-squads-repository"
-import { CreateSquadService } from "../squads/create-squad-service"
+import { CreateSquadService } from "@/services/squads/create-squad-service"
 
 export function makeSquadService() {
   const prismaSquadsRepository = new PrismaSquadsRepository()

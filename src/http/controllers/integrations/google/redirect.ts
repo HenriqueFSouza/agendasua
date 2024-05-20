@@ -1,3 +1,4 @@
+import { env } from "@/env";
 import { makeCreateIntegrationService } from "@/services/factories/make-create-integration-service";
 import { oauth2Client } from "@/utils/google/oAuthClietnt";
 import { FastifyReply, FastifyRequest } from "fastify";
@@ -16,8 +17,6 @@ export async function googleRedirect(req: FastifyRequest, reply: FastifyReply) {
   const { user_id } = JSON.parse(state)
   const { tokens } = await oauth2Client.getToken(code)
 
-  oauth2Client.setCredentials(tokens);
-
   const createIntegrationService = makeCreateIntegrationService()
 
   await createIntegrationService.execute({
@@ -30,6 +29,6 @@ export async function googleRedirect(req: FastifyRequest, reply: FastifyReply) {
     name: 'google'
   })
 
-  return reply.redirect('http://localhost:3000/integrations')
+  return reply.redirect(env.WEBSITE_URL + '/integrations')
 
 }

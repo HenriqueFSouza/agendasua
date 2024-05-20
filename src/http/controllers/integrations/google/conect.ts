@@ -3,7 +3,7 @@ import { FastifyReply, FastifyRequest } from "fastify";
 
 
 export async function googleConect(req: FastifyRequest, reply: FastifyReply) {
-  const scopes = 'https://www.googleapis.com/auth/calendar email';
+  const scopes = 'https://www.googleapis.com/auth/calendar';
 
   const user_id = req.user.sub
 

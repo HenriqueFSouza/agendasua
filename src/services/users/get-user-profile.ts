@@ -1,5 +1,6 @@
 import { UsersRepository } from "@/repositories/users-repository";
 import { ResourceNotFoundError } from "../errors/resource-not-found-error";
+import { UserTypes } from "@/@types/users";
 
 interface GetUserProfileServiceRequest {
   user_id: string;

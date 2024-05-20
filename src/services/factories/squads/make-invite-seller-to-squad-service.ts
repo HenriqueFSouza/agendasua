@@ -1,5 +1,5 @@
 import { PrismaSquadsMemberRepository } from "@/repositories/prisma/prisma-squads-member-repository"
-import { InviteSellerToSquadService } from "../squads/invite-seller-to-squad"
+import { InviteSellerToSquadService } from "../../squads/invite-seller-to-squad"
 import { PrismaSquadsRepository } from "@/repositories/prisma/prisma-squads-repository"
 import { PrismaUsersRepository } from "@/repositories/prisma/prisma-users-repository"
 

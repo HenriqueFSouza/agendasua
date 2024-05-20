@@ -1,3 +1,5 @@
+import { Integration, User } from "@prisma/client";
+
 declare namespace UserTypes {
 
   export type PreRegister = {

@@ -3,6 +3,7 @@ import { SquadMember } from "@prisma/client";
 import { SquadsMemberRepository } from "../squads-member-repository";
 
 export class PrismaSquadsMemberRepository implements SquadsMemberRepository {
+
   async create(squad_id: string, user_id: string) {
     const squadMember = await prisma.squadMember.create({
       data: {
@@ -26,5 +27,18 @@ export class PrismaSquadsMemberRepository implements SquadsMemberRepository {
     })
 
     return squadMember
+  }
+
+  async findSellerSquads(seller_id: string): Promise<{ squad_id: string; }[] | []> {
+    const ids = await prisma.squadMember.findMany({
+      where: {
+        user_id: seller_id
+      },
+      select: {
+        squad_id: true
+      }
+    })
+
+    return ids
   }
 }
